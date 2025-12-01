@@ -8,6 +8,7 @@ workflows:
     triggering:
       events:
         - push
+
     scripts:
       - name: Make gradlew executable
         script: chmod +x ./gradlew
@@ -22,6 +23,6 @@ workflows:
       - android/app/build/outputs/**/*.apk
 
     publishing:
-      email:chaudharyamit46533@gmail.com
+      email:
         recipients:
-          - "your-email@example.com"
+          - "chaudharyamit46533@gmail.com"
