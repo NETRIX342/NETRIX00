@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="24dp"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView android:text="NETRIX" android:textSize="28sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+    <TextView android:text="Learn • Secure • Evolve" android:layout_marginBottom="24dp"/>
+    <Button android:id="@+id/btnScan" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Scan Message / Link"/>
+    <Button android:id="@+id/btnReports" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Threat Reports"/>
+</LinearLayout>
