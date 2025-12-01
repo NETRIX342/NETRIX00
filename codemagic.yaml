@@ -1,0 +1,27 @@
+workflows:
+  android-app:
+    name: Build Android APK
+    max_build_duration: 30
+    environment:
+      sdk: "android-34"
+      gradle: "8.2"
+    triggering:
+      events:
+        - push
+    scripts:
+      - name: Make gradlew executable
+        script: chmod +x ./gradlew
+
+      - name: Clean project
+        script: ./gradlew clean
+
+      - name: Build Release APK
+        script: ./gradlew assembleRelease
+
+    artifacts:
+      - android/app/build/outputs/**/*.apk
+
+    publishing:
+      email:chaudharyamit46533@gmail.com
+        recipients:
+          - "your-email@example.com"
