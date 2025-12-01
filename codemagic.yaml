@@ -3,14 +3,6 @@ workflows:
     name: Build Android APK
     max_build_duration: 60
 
-    environment:
-      android_signing:
-        - keystore_reference
-
-    triggering:
-      events:
-        - push
-
     scripts:
       - name: Make gradlew executable
         script: chmod +x ./gradlew
@@ -23,8 +15,3 @@ workflows:
 
     artifacts:
       - android/app/build/outputs/**/*.apk
-
-    publishing:
-      email:
-        recipients:
-          - "chaudharyamit46533@gmail.com"
