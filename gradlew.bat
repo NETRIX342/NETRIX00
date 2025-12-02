@@ -1,9 +1,7 @@
 @ECHO OFF
-SET DIRNAME=%~dp0
-IF "%DIRNAME%" == "" SET DIRNAME=.
 SET APP_BASE_NAME=%~n0
-SET APP_HOME=%DIRNAME%
+SET APP_HOME=%~dp0
 
-SET CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+SET CLASSPATH=%APP_HOME%gradle\wrapper\gradle-wrapper.jar
 
 java -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
